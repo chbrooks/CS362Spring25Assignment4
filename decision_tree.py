@@ -34,14 +34,7 @@ def gain(features, classifications) :
     indep_vars = list(features)
     dep_vars = list(classifications)
     initial_entropy = entropy(classifications)
-
-    ## you do the rest!
-    ## for each value in vars:
-    ##    count how many there are: p count / length
-    ##    get the classifications corresponding to that value
-    ##    compute their entropy.
-    ## compute weighted average. - remainder
-    ## return initial entropy - remainder.
+    # you do the rest
 
 
 # select_attribute takes two inputs:
@@ -51,13 +44,7 @@ def gain(features, classifications) :
 # and returns the name of the column with the greatest gain.
 
 def select_attribute(features, classifications) :
-    ## for column in features
-    ## compute gain for that column
-    ## if > current max
-    # current_max = gain
-    # return current max
-
-
+    pass
 
 # make_tree takes two required inputs
 # 1. A dataframe consisting of the features to be considered
@@ -89,27 +76,8 @@ def select_attribute(features, classifications) :
 #
 
 def make_tree(features, classifications,zeror_val='play',attr_dict=None):
-    ### base case:
-    ## all data is of the same class. everything in classifications is the same.
-    # return a new Node - no children or attribute, classification = element in classifications
+    pass
 
-    # out of rows?
-    # missing an attribute value.
-    # return new leaf node using ZeroR as a classification.
-
-    # out of columns?
-    # return a new Leaf node with ZeroR classification
-
-
-    ## else:
-    # a = call select attribute.
-    # n = create a new node. attribute = a.
-    # go through the data, for each value of a:
-    # dont forget missing values
-    # get the data with that value
-    # call make_tree on that data.
-    # set n.children[value] = make_tree.
-    # need to drop the column corresponding to this attribute.
 
 # classify takes two inputs:
 # A node and a Series representing the data to classify.
@@ -122,11 +90,7 @@ def make_tree(features, classifications,zeror_val='play',attr_dict=None):
 #   Call classify on the child node corresponding to that value.
 
 def classify(tree, data_to_classify) :
-    # case 1: we are at a leaf. Return tree.classification
-    # case 2: not at a leaf
-    # check what attribute this tree tests.
-    # v = get the corresponding value from data_to_classify
-    # call classify tree.children[v]
+    pass
 
 if __name__ == "__main__" :
     # set up for the tennis data
