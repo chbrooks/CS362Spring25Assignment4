@@ -6,7 +6,6 @@ def ZeroR(data) :
     c = Counter(data)
     return c.most_common(1)[0][0]
 
-
 class Node :
     def __init__(self, classification=None,attribute=None):
         self.classification = classification
@@ -89,15 +88,18 @@ def make_tree(features, classifications,zeror_val='play',attr_dict=None):
 #   Get the value of data_to_classify for that feature.
 #   Call classify on the child node corresponding to that value.
 
+
+
+
 def classify(tree, data_to_classify) :
-    pass
+   pass
 
 if __name__ == "__main__" :
     # set up for the tennis data
     attr_dict = {'outlook' : ['sunny','overcast','rainy'],
                  'temperature' : ['hot','mild','cool'],
                  'humidity' : ['high','normal'],
-                 'windy' : ['TRUE','FALSE']}
+                 'windy' : ['weak','strong']}
     tennis_data = pd.read_csv('tennis.csv')
     features = tennis_data.iloc[:,:-1]
     classifications = tennis_data.iloc[:,-1]
